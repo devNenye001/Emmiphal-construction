@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion as Motion } from "framer-motion";
-import './ContactSection.css';
+import './contactSection.css';
 import { Link } from 'react-router';
 
 const ContactSection = () => {

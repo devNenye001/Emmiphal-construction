@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion as Motion } from "framer-motion";
 
-import './ServiceSection.css';
+import './serviceSection.css';
 import ServiceCard from '../../cards/serviceCard/serviceCard';
 
 const ServiceSection = () => {

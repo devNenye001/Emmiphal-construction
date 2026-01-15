@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion as Motion } from "framer-motion";
-import './ProjectSection.css';
+import './projectSection.css';
 import ProjectCard from '../../cards/projectCard/projectCard';
 
 // SVG Icons for buttons

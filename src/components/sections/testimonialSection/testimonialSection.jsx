@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion as Motion, AnimatePresence } from "framer-motion";
-import './TestimonialSection.css';
+import './testimonialSection.css';
 
 // Icons
 const ArrowLeft = () => (
