@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion as Motion } from "framer-motion";
-import './ServiceCard.css';
+import './serviceCard.css';
 import { Link } from 'react-router';
 
 // Reusable Arrow Icon SVG

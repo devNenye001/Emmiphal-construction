@@ -1,6 +1,6 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
-import "./ProjectCard.css";
+import "./projectCard.css";
 
 // You can pass the image URL and text as props to make this reusable
 const ProjectCard = ({
