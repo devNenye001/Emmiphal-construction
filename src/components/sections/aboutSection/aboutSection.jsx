@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion as Motion } from "framer-motion";
-import './AboutSection.css';
+import './aboutSection.css';
 
 // Reusable Stat Component for cleaner code
 const StatItem = ({ number, label, delay }) => (
