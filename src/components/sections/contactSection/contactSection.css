@@ -1,0 +1,98 @@
+/* ContactSection.css */
+
+.contact-section {
+  padding: 0px 20px;
+  padding-bottom: 80px;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-banner {
+  width: 100%;
+  max-width: 1200px;
+  /* Gradient from very light orange/cream to the specific Orange #FF5500 */
+  background: linear-gradient(105deg, #FFF8E7 0%, #ffdecb 60%, #FF5500 100%);
+  border-radius: 24px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(255, 85, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Text Content */
+.contact-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2; /* Ensures text is above any background decorations */
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+/* Button Styling */
+.contact-btn {
+  background-color: #FF5500; /* The requested Orange */
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+ 
+  outline: none;
+  white-space: nowrap;
+}
+
+/* Decorative Circle (Optional subtle background detail) */
+.deco-circle {
+  position: absolute;
+  right: -50px;
+  bottom: -100px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .contact-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    background: linear-gradient(180deg, #FFF8E7 0%, #ffdecb 100%); /* Stacked gradient for mobile */
+  }
+
+  .contact-content {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-heading {
+    font-size: 2rem;
+  }
+  
+  .contact-btn {
+    width: 100%; /* Full width button on mobile */
+  }
+}

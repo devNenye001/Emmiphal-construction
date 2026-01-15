@@ -1,0 +1,154 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer{
+    height: 57vh;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    font-size: 14px;
+    padding: 30px 35px;
+    font-weight: 500;
+}
+
+.footerdivmain{
+    width: 300px;
+}
+
+#footerdiv{
+    width: 300px;
+}
+
+.footerdivmain div{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+} 
+.footerdivmain img{
+    margin-left: -10px;
+    margin-bottom: 20px;
+} 
+
+.footerdiv p span {
+    color: #FF5500;
+}
+.footerdiv p{
+    color: #000000;
+}
+
+.footer-top .footerdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footergroup{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.footer-top .footerdiv h3{
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FF5500;
+}
+
+.footer-top{
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.footer-bottom{
+    border-top: #a9a9a9 1.5px solid !important;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+.footer p{
+    margin: 0;
+}
+
+.footer-bottom p{
+    font-size: 13px;
+    font-weight: 500;
+   
+}
+.footer a{
+    color: #000000;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: #FF5500;
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        height: auto;
+        padding: 20px 50px;
+    }
+    .footergroup {
+        width: 100%;
+        gap: 45px;
+    }
+    
+    .footer-bottom {
+        padding: 25px 0;
+    }
+}
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+        padding: 10px 40px;
+    }
+    .footergroup {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-top {
+        flex-direction: column;
+    }
+    
+    .footer-bottom {
+        padding: 20px 0;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px 30px;
+    }
+    
+    .footergroup {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footerdivmain {
+        width: 100%;
+    }
+    
+    .footerdivmain div {
+        width: 100%;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    
+    .footer-top .footerdiv h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}

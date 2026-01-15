@@ -1,0 +1,222 @@
+/* contact.css */
+
+.contact-page-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.contact-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.contact-page-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-page-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.contact-page-subtitle {
+  font-size: 1.1rem;
+  color: #666666;
+  font-weight: 400;
+}
+
+/* Main Layout Grid */
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 40px;
+}
+
+/* Common Card Styling */
+.contact-page-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 40px;
+  /* Subtle transition for hover effects */
+  transition: all 0.3s ease;
+  height: 100%; /* Ensures both cards are same height */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.contact-page-card:hover {
+  border-color: #FF5500; /* Orange border on hover */
+  box-shadow: 0 15px 30px rgba(255, 85, 0, 0.08); /* Orange tinted shadow */
+}
+
+/* --- Left Card: Contact Info --- */
+
+.contact-info-group {
+  margin-bottom: 30px;
+}
+
+.contact-icon-box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+/* Hovering the group lights up the icon */
+.contact-info-group:hover .contact-icon-box {
+  background-color: #FF5500;
+  border-color: #FF5500;
+  color: #ffffff;
+}
+
+.contact-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-text {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+  display: block;
+}
+
+/* Socials Section */
+.contact-socials-wrapper {
+  margin-top: 40px;
+}
+
+.contact-social-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background-color: #FF5500;
+  border-color: #FF5500;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.social-footer-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+/* --- Right Card: Locations --- */
+
+.locations-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.location-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.location-pin-icon {
+  width: 24px;
+  height: 24px;
+  color: #666666;
+  flex-shrink: 0;
+  margin-top: 4px; /* Align with text top */
+  transition: color 0.3s ease;
+}
+
+.location-item:hover .location-pin-icon {
+  color: #FF5500; /* Pin turns orange on hover */
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.location-city {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.location-address {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+/* Icons styling */
+.feather-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-page-grid {
+    grid-template-columns: 1fr; /* Stack on mobile/tablet */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-page-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-page-card {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+    .contact-page-card{
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+    }
+}

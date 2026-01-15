@@ -1,0 +1,149 @@
+/* ProjectSection.css */
+
+.project-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header Styling */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.header-content {
+  max-width: 600px;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.highlight-orange {
+  color: #FF5500;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Navigation Buttons */
+.nav-buttons2 {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 10px; /* Aligns with text visually */
+}
+
+.nav-btn2 {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #1a1a1a;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+
+.nav-btn2:hover {
+/* Orange Hover */
+  border-color: #FF5500;
+  color: #FF5500;
+
+}
+
+.nav-icon2 {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+}
+
+/* Scroll Container (Carousel) */
+.projects-scroll-wrapper {
+  /* Hides scrollbar but allows scrolling */
+  overflow-x: auto;
+  padding-bottom: 20px; /* Space for shadow */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  /* Ensure padding works on the right side of the last item */
+  padding-right: 20px; 
+}
+
+.projects-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.projects-track {
+  display: flex;
+  gap: 30px;
+  width: max-content; /* Allows items to sit in a row */
+}
+
+/* Wrapper for individual cards to ensure consistent sizing */
+.project-card-wrapper {
+  width: 350px; /* Fixed width for carousel items */
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nav-buttons {
+    display: none; /* Hide buttons on mobile, user will swipe */
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .nav-buttons2 {
+    display: none;
+  }
+  .project-card-wrapper {
+  width: 100%; /* Fixed width for carousel items */
+  flex-shrink: 0;
+}
+
+.projects-track {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+}

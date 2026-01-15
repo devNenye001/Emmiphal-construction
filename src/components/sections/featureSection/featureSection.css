@@ -1,0 +1,118 @@
+/* FeatureSection.css */
+
+.feature-section {
+  padding: 0px 20px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.feature-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.feature-header {
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.highlight-orange {
+  color: #FF5500; /* The requested Orange */
+}
+
+.feature-subtitle {
+  font-size: 1.1rem;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card Styling */
+.feature-card {
+  background-color: #FFF3D6; /* Matches the pale yellow/beige in image */
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  box-shadow: 0 15px 30px rgba(255, 85, 0, 0.15); /* Orange tinted shadow */
+}
+
+/* Icon Styling */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 3;
+}
+
+/* Card Text */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-title {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 20px;
+  }
+  
+  .feature-card {
+    padding: 30px 24px;
+  }
+}

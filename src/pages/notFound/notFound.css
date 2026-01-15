@@ -1,0 +1,99 @@
+/* Container Layout */
+.not-found-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+height: 90vh;
+  padding: 2rem;
+  background-color: #fff;
+  gap: 4rem; /* Space between text and image */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Left Content Section */
+.content-section {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon Styling */
+.icon-badge {
+  padding: 10px 15px;
+  background-color: #e6e6e6; /* Light grey background */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.exclamation {
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+/* Typography */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Button Customization 
+   Targeting the button component via the class passed in JSX */
+.home-button {
+  background-color: #ff5400; /* Matches the orange in image */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%; /* Makes button span the width of the text container */
+  transition: background-color 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #e04b00;
+}
+
+
+
+
+/* Responsive Design for Mobile/Tablet */
+@media (max-width: 900px) {
+  .not-found-container {
+    flex-direction: column-reverse; /* Puts image on top or bottom depending on preference */
+    padding: 1rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .content-section {
+    align-items: center; /* Center aligns text on mobile */
+  }
+
+  .image-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

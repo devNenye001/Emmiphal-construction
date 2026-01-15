@@ -1,0 +1,117 @@
+.services-page {
+  padding: 60px 0px;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Prevent horizontal scroll from slide animations */
+}
+
+.services-container {
+  max-width: 1500px;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Section */
+.services-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+}
+
+.services-main-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.services-intro {
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Service Row Layout */
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px; /* Space between rows */
+}
+
+/* Reverse the layout for even items (Image Left, Text Right) */
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text Content */
+.service-text-content {
+    flex: 1;
+}
+
+.service-item-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #FF5500; /* The requested Orange */
+  margin-bottom: 16px;
+  display: block;
+}
+
+.service-item-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* Image Content */
+.service-image-container2 {
+    flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.service-item-image2 {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-image-container:hover .service-item-image {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+  .service-row {
+    flex-direction: column-reverse !important; /* Always text bottom, image top on mobile */
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .service-row.reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .service-text-content {
+    width: 100%;
+  }
+
+  .service-image-container2 {
+    width: 100%;
+    height: 250px !important; /* Shorter on mobile */
+  }
+
+  .services-main-title {
+    font-size: 1.75rem;
+  }
+
+  .service-item-title {
+    font-size: 1.5rem;
+  }
+}
