@@ -124,4 +124,9 @@
     font-size: 0.8rem;
   }
 
+  .home-video {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: auto;
+  }
 }
