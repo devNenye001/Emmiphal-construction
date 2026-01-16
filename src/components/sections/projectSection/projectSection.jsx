@@ -30,7 +30,7 @@ const navigate = useNavigate();
     location: "Enugu, Nigeria",
     scope: ["Foundation", "Roofing", "Interiors"],
     outcome: "Delivered on time.",
-    gallery1: ["/img1.jpg", "/img2.jpg", "/img3.jpg"],
+    gallery1: ["/12.jpeg", "/10.jpeg", "/8.jpg"],
     gallery2: ["/img4.jpg", "/img5.jpg", "/img6.jpg"]
   },
   {
@@ -42,19 +42,19 @@ const navigate = useNavigate();
     location: "Lagos, Nigeria",
     scope: ["Design", "Construction", "Finishing"],
     outcome: "Exceeded client expectations.",
-    gallery1: ["/img7.jpg", "/img8.jpg", "/img9.jpg"],
+    gallery1: ["/12.jpeg", "/10.jpeg", "/8.jpg"],
     gallery2: ["/img10.jpg", "/img11.jpg", "/img12.jpg"]
   },
     {
     id: 3,
-    title: "Infrastructure Development - Abuja",
+    title: "Real Estate - Abuja",
     description: "Modern infrastructure projects...",
     image: "/4.jpeg",
     // Detailed fields specifically for the Detail Page
     location: "Abuja, Nigeria",
     scope: ["Roads", "Bridges", "Utilities"],
     outcome: "Completed ahead of schedule.",
-    gallery1: ["/img13.jpg", "/img14.jpg", "/img15.jpg"],
+    gallery1: ["/12.jpeg", "/10.jpeg", "/8.jpg"],
     gallery2: ["/img16.jpg", "/img17.jpg", "/img18.jpg"]
   },
   {
@@ -65,7 +65,7 @@ const navigate = useNavigate();
     // Detailed fields specifically for the Detail Page
     location: "Port Harcourt, Nigeria",
     scope: ["Site Prep", "Construction", "Equipment Installation"],
-    gallery1: ["/img19.jpg", "/img20.jpg", "/img21.jpg"],
+    gallery1: ["/12.jpeg", "/10.jpeg", "/8.jpg"],
     gallery2: ["/img22.jpg", "/img23.jpg", "/img24.jpg"]
   }
   ];
