@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion as Motion } from "framer-motion";
 import './projectSection.css';
+import { useNavigate } from "react-router-dom";
 import ProjectCard from '../../cards/projectCard/projectCard';
 
 // SVG Icons for buttons
@@ -14,6 +15,9 @@ const ArrowRight = () => (
 
 const ProjectSection = () => {
   const scrollContainerRef = useRef(null);
+
+const navigate = useNavigate();
+
 
   // Data from your image
   const projects = [
@@ -167,10 +171,16 @@ const ProjectSection = () => {
                 variants={itemVariants}
               >
                 <ProjectCard 
-                  title={project.title}
-                  description={project.description}
-                  imageSrc={project.image}
-                />
+  title={project.title}
+  description={project.description}
+  imageSrc={project.image}
+  onClick={() =>
+    navigate(`/projects/${project.id}`, {
+      state: { projectData: project },
+    })
+  }
+/>
+
               </Motion.div>
             ))}
           </Motion.div>

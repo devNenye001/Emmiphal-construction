@@ -188,6 +188,21 @@
   transform: translateY(-2px);
 }
 
+.proj-not-found{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    height: 80vh;
+    font-weight: 500;
+}
+
+.proj-not-found .button-wrapper{
+    margin-top: 20px;
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
   .pd-title {

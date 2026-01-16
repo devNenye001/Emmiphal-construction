@@ -1,45 +1,95 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
 import { motion as Motion } from "framer-motion";
-import { useLocation } from 'react-router-dom'; // Import hooks
-import './projectDetail.css';
+import { useLocation } from "react-router-dom";
+import "./projectDetail.css";
+import { BsExclamationCircleFill } from 'react-icons/bs';
+import Button from "../../components/button/button";
+import { Link } from "react-router-dom";
 
-// ... (Keep your Icon components here: LocationPin, CheckIcon) ...
+
+
 
 const ProjectDetail = () => {
-  // const { id } = useParams(); // Get ID from URL
-  const location = useLocation(); // Get state passed from Card
-  
-  // 1. Try to get data passed from the Card click
-  // 2. Fallback to a default object if page is refreshed directly (where state is lost)
-  const project = location.state?.projectData || {
-    title: "Project Not Found or Loading...",
-    heroImage: " /12.jpeg",
-    overview: "We could not retrieve the project details. Please go back to the projects page.",
-    location: "Unknown",
-    scope: [],
-    outcome: "",
-    gallery1: [],
-    gallery2: []
-  };
+  const { state } = useLocation();
 
-  // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Animation Variants (Same as before)
+  if (!state?.projectData) {
+    return <div className="proj-not-found">
+        <Motion.div
+      className="not-found-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Motion.div
+        className="content-section"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
+      >
+        <Motion.div
+          className="icon-badge"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.5, type: 'spring', stiffness: 200 }}
+        >
+          <Motion.span
+            className="exclamation"
+            initial={{ rotate: -90, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+          >
+            <BsExclamationCircleFill />
+          </Motion.span>
+        </Motion.div>
+        
+        <Motion.h1
+          className="title"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+        >
+          Project not found!
+        </Motion.h1>
+        
+        
+        <Motion.div className="button-wrapper" initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.2, duration: 0.5 }}>
+          <Link to="/projects">
+          <Button label="View Other Projects" />
+          </Link>
+        </Motion.div>
+      </Motion.div>
+    </Motion.div>
+    </div>;
+  }
+
+  const project = state.projectData;
+
+  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
   };
 
   return (
     <div className="pd-page-wrapper">
-      <Motion.div 
+      <Motion.div
         className="pd-container"
         variants={containerVariants}
         initial="hidden"
@@ -48,29 +98,51 @@ const ProjectDetail = () => {
         {/* Header */}
         <Motion.div className="pd-header" variants={itemVariants}>
           <h1 className="pd-title">{project.title}</h1>
+          <p className="pd-subtitle">{project.location}</p>
         </Motion.div>
 
         {/* Hero Image */}
         <Motion.div className="pd-hero-section" variants={itemVariants}>
-          <img src={project.heroImage} alt={project.title} className="pd-hero-img" />
+          <img
+            src={project.image}
+            alt={project.title}
+            className="pd-hero-img"
+          />
         </Motion.div>
 
-        {/* Overview Section */}
+        {/* Overview */}
         <Motion.div className="pd-section" variants={itemVariants}>
           <h2 className="pd-section-title">Project Overview</h2>
-          <p className="pd-text">{project.overview}</p>
-          
+          <p className="pd-text">{project.description}</p>
+
           <div className="pd-gallery-grid">
             {project.gallery1?.map((img, index) => (
               <div key={index} className="pd-gallery-item">
-                <img src={img} alt="Detail" className="pd-gallery-img" />
+                <img src={img} alt="Project detail" className="pd-gallery-img" />
               </div>
             ))}
           </div>
         </Motion.div>
 
-        {/* ... (Rest of your JSX: Location, Scope, Outcome, CTA) ... */}
-        
+        {/* Scope */}
+        {project.scope && (
+          <Motion.div className="pd-section" variants={itemVariants}>
+            <h2 className="pd-section-title">Project Scope</h2>
+            <ul className="pd-list">
+              {project.scope.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </Motion.div>
+        )}
+
+        {/* Outcome */}
+        {project.outcome && (
+          <Motion.div className="pd-section" variants={itemVariants}>
+            <h2 className="pd-section-title">Outcome</h2>
+            <p className="pd-text">{project.outcome}</p>
+          </Motion.div>
+        )}
       </Motion.div>
     </div>
   );
