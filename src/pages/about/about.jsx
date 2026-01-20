@@ -82,17 +82,18 @@ const About = () => {
 
         {/* Hero Image */}
         <Motion.div 
-          className="about-page-hero-wrapper"
+       
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={scaleIn}
         >
-          <img 
-            src="/a2.jpg" // Replace with construction site image
-            alt="Construction Site Team" 
-            className="about-page-hero-img" 
-          />
+          
+         <div className="home-video">
+        <video autoPlay loop controls muted>
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
+      </div>
         </Motion.div>
 
         {/* Detailed Description */}
