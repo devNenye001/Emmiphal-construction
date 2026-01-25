@@ -177,3 +177,55 @@
     font-size: 1.75rem;
   }
 }
+
+.doc-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.doc-buttons a {
+   background-color: #FF5500;
+    color: #ffffff;
+    border: none;
+    padding: 16px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.doc-buttons a:hover{
+   background-color: #fe6d24;
+}
+.about-page-certification {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.about-page-certification p {
+   font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 30px;
+  text-align: justify; 
+}
+
+.about-page-certification-heading {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.about-page-certification-image img {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+ 
+}

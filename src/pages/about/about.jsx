@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion as Motion } from "framer-motion";
 import './about.css';
-
 const About = () => {
   // Team Data extracted from image
   const teamMembers = [
@@ -156,6 +155,70 @@ const About = () => {
             ))}
           </Motion.div>
         </div>
+
+{/* Incorporation & Legal Documentation */}
+<Motion.div
+  className="about-page-certification"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeUp}
+>
+  <h2 className="about-page-certification-heading">
+    Company Incorporation & <span className="about-page-highlight">Legal</span> Documents
+  </h2>
+
+  <p>
+    Emmiphal Global Construction Company is fully registered and operates under approved legal 
+    documentation, including its <strong>Memorandum and Articles of Association (MEMART)</strong>.
+    These documents define the company’s objectives, structure, and governance.
+    Our incorporation and compliance with statutory requirements reinforce our commitment to 
+    professionalism, accountability, and ethical business practices.
+  </p>
+
+  {/* Optional document preview */}
+  <div className="about-page-certification-image">
+    <img 
+      src="/memart-certificate.png" 
+      alt="Memorandum and Articles of Association Document"
+      style={{ border: "1px solid black"}}
+    />
+  </div>
+
+  <div className="doc-buttons">
+    <a href="/Mermat - EMMIPHAL GLOBAL LTD.pdf" target="_blank" rel="noopener noreferrer">
+      View MEMART Document
+    </a>
+  </div>
+</Motion.div>
+
+{/* Company Incorporation Section */}
+<Motion.div
+  className="about-page-certification"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeUp}
+>
+  <h2 className="about-page-certification-heading">
+    Company Incorporation & <span className="about-page-highlight">Certification</span>
+  </h2>
+
+  <p>
+    Emmiphal Global Construction Company is a legally registered company with all required 
+    incorporation documents and certifications. This ensures our operations meet regulatory 
+    standards and gives our clients confidence in working with a trusted and compliant firm.
+  </p>
+
+  {/* Optional: certificate image */}
+  <div className="about-page-certification-image">
+    <img 
+      src="/certificate.png" 
+      alt="Company Incorporation Certificate"
+    />
+  </div>
+</Motion.div>
+
 
       </div>
     </div>

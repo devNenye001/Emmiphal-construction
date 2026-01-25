@@ -98,7 +98,7 @@ const TestimonialSection = () => {
 
         {/* Dynamic Content Area */}
         <div className="testimonial-content">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="sync">
             
             {/* Image Side */}
             <Motion.div 

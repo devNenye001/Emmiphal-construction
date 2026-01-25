@@ -2,6 +2,19 @@ import React from "react";
 import { motion as Motion } from "framer-motion";
 import "./projectCard.css";
 
+// Loading skeleton card
+export const LoadingProjectCard = () => (
+  <div className="project-card loading-skeleton">
+    <div className="card-image-wrapper skeleton-box" />
+    <div className="card-content">
+      <div className="skeleton-title skeleton-box" />
+      <div className="skeleton-desc skeleton-box" />
+      <div className="skeleton-desc skeleton-box" />
+      <div className="skeleton-btn skeleton-box" />
+    </div>
+  </div>
+);
+
 // You can pass the image URL and text as props to make this reusable
 const ProjectCard = ({
   // id,
