@@ -40,25 +40,25 @@ const ProjectSection = () => {
 
   // Data from your image
   const projects = [
-  {
+   {
       id: 1,
-      title: "Residential Housing - Enugu",
-      description: "Thinkers Corner Enugu State ",
+      title: "Residential House - Anambra",
+      description: "Permanent site FCET Umunze orumba south LGA Anambra State",
       image: "/a19.jpeg",
       // Detailed fields specifically for the Detail Page
-      location: "Enugu State, Nigeria",
-      scope: ["Foundation", "Roofing", "Interiors"],
+      location: "Anambra State, Nigeria",
+      scope: ["Design", "Construction", "Finishing"],
       outcome: "Delivered on time.",
       gallery1: ["/pj-1.mp4"],
       gallery2: ["/pj-1.mp4", "/pj-1.mp4", "/pj-1.mp4"],
     },
     {
       id: 2,
-      title: "Residential Housing - Anambra",
-      description: "Permanent site FCET Umunze orumba south LGA Anambra State ",
+      title: "Residential House - Enugu ",
+      description: "Thinkers Corner, Enugu State ",
       image: "/a21.jpeg",
       // Detailed fields specifically for the Detail Page
-      location: "Anambra State, Nigeria",
+      location: "Enugu State, Nigeria",
       scope: ["Design", "Construction", "Finishing"],
       outcome: "Exceeded client expectations.",
       gallery1: ["/pj-2.mp4", "/pj-21.mp4", "/pj-22.mp4", "/pj-23.mp4", "/pj-24.mp4", "/pj-25.mp4", "/pj-26.mp4"],
